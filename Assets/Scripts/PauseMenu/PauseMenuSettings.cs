@@ -23,6 +23,8 @@ public class PauseMenuSettings : MonoBehaviour
 
     public Toggle explosiveToggle;
 
+    public Button exitButton;
+
     public static bool isGamePaused = false;
 
 
@@ -71,6 +73,11 @@ public class PauseMenuSettings : MonoBehaviour
     public void ExplosiveChange()
     {
         Bullet.isExplosive = explosiveToggle.isOn;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     private void Update()
     {
